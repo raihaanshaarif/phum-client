@@ -7,6 +7,8 @@ import Register from "../pages/Register";
 import AdminDashboard from "../pages/admin/AdminDashboard";
 import CreateStudent from "../pages/admin/CreateStudent";
 import About from "../pages/About";
+import CreateAdmin from "../pages/admin/CreateAdmin";
+import CreateFaculty from "../pages/admin/CreateFaculty";
 
 export const router = createBrowserRouter([
   {
@@ -30,16 +32,20 @@ export const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        index: true,
-        element: <AdminDashboard />,
-      },
-      {
         path: "dashboard",
         element: <AdminDashboard />,
       },
       {
-        path: "create-Student",
+        path: "create-student",
         element: <CreateStudent />,
+      },
+      {
+        path: "create-admin",
+        element: <CreateAdmin />,
+      },
+      {
+        path: "create-faculty",
+        element: <CreateFaculty />,
       },
     ],
   },
